@@ -1,0 +1,34 @@
+using System;
+
+namespace sum
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            int i = 0;
+            
+            var t = Console.ReadLine();
+            int r = Convert.ToInt32(t);
+            int o = r;
+            int[] sums = new int[r];
+            while (o > 0)
+            {
+                var line = Console.ReadLine();
+                var data = line.Split('+');
+                int i1 = Convert.ToInt32(data[0]);    
+                int i2 = Convert.ToInt32(data[1]);
+             
+              
+                o--;
+                sums[i] = i1 + i2;
+                i++;
+            }
+            for (i=0;i<sums.Length;i++)
+            {
+                Console.WriteLine(sums[i]);
+            }
+        }
+    }
+}
